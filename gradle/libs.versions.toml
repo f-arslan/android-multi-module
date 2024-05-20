@@ -1,0 +1,83 @@
+[versions]
+androidGradlePlugin = "8.3.1"
+androidTools = "31.4.0"
+androidxActivity = "1.9.0"
+androidxComposeBom = "2024.05.00"
+androidxComposeCompiler = "1.5.12"  # Compose VC
+androidxHiltNavigationCompose = "1.2.0"
+androidxLifecycle = "2.8.0"
+androidxNavigation = "2.8.0-beta01"
+androidxTestExt = "1.1.5"
+androidxTestRunner = "1.5.2"
+baseJunit = "4.13.2"
+coreKtxVersion = "1.13.1"
+espressoCore = "3.5.1"
+hilt = "2.51.1"
+junit = "1.1.5"
+kotlin = "1.9.23"
+kotlinxCoroutines = "1.8.0"
+kotlinxSerializationJson = "1.6.3"
+ksp = "1.9.23-1.0.20"
+
+[libraries]
+# Compose
+androidx-activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "androidxActivity" }
+androidx-compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "androidxComposeBom" }  # Android Compose VC
+androidx-compose-foundation = { group = "androidx.compose.foundation", name = "foundation" }
+androidx-compose-foundation-layout = { group = "androidx.compose.foundation", name = "foundation-layout" }
+androidx-compose-material3 = { group = "androidx.compose.material3", name = "material3" }
+androidx-compose-runtime = { group = "androidx.compose.runtime", name = "runtime" }
+androidx-compose-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
+androidx-compose-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview" }
+androidx-navigation-compose = { group = "androidx.navigation", name = "navigation-compose", version.ref = "androidxNavigation" }
+androidx-compose-ui-util = { group = "androidx.compose.ui", name = "ui-util" }
+androidx-lifecycle-runtimeCompose = { group = "androidx.lifecycle", name = "lifecycle-runtime-compose", version.ref = "androidxLifecycle" }
+androidx-lifecycle-viewModelCompose = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-compose", version.ref = "androidxLifecycle" }
+androidx-compose-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }  # Android Compose VC
+androidx-compose-ui-test = { group = "androidx.compose.ui", name = "ui-test" }  # Android Compose VC
+androidx-compose-ui-testManifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }  # Android Compose VC
+# End
+
+# Testing
+androidx-test-ext = { group = "androidx.test.ext", name = "junit-ktx", version.ref = "androidxTestExt" } # Kotlin Android VC
+androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junit" } # Kotlin Android VC
+androidx-test-runner = { group = "androidx.test", name = "runner", version.ref = "androidxTestRunner" }  # app build gradle
+# End
+
+# Hilt
+hilt-android = { group = "com.google.dagger", name = "hilt-android", version.ref = "hilt" }
+hilt-compiler = { group = "com.google.dagger", name = "hilt-android-compiler", version.ref = "hilt" }
+androidx-hilt-navigation-compose = { group = "androidx.hilt", name = "hilt-navigation-compose", version.ref = "androidxHiltNavigationCompose" }  #Android Feature VC
+# End
+
+# Kotlin
+kotlinx-coroutines-android = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-android", version.ref = "kotlinxCoroutines" }  #Android Feature VC
+kotlinx-serialization-json = { group = "org.jetbrains.kotlinx", name = "kotlinx-serialization-json", version.ref = "kotlinxSerializationJson" }
+# End
+
+# Dependencies of the included build-logic
+android-gradlePlugin = { group = "com.android.tools.build", name = "gradle", version.ref = "androidGradlePlugin" }
+kotlin-gradlePlugin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "kotlin" }
+ksp-gradlePlugin = { group = "com.google.devtools.ksp", name = "com.google.devtools.ksp.gradle.plugin", version.ref = "ksp" }
+androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtxVersion" }
+android-tools-common = { group = "com.android.tools", name = "common", version.ref = "androidTools" }
+junit = { group = "junit", name = "junit", version.ref = "baseJunit" }
+androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+# End
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "androidGradlePlugin" }
+android-library = { id = "com.android.library", version.ref = "androidGradlePlugin" }
+hilt = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
+ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
+kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
+
+# Plugins defined by this project
+jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+starter-android-application = { id = "starter.android.application", version = "unspecified" }
+starter-android-application-compose = { id = "starter.android.application.compose", version = "unspecified" }
+starter-android-library = { id = "starter.android.library", version = "unspecified" }
+starter-android-library-compose = { id = "starter.android.library.compose", version = "unspecified" }
+starter-android-feature = { id = "starter.android.feature", version = "unspecified" }
+starter-android-hilt = { id = "starter.android.hilt", version = "unspecified" }
+# End
