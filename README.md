@@ -1,6 +1,6 @@
 # Android Multi-Module Architecture
 
-### Haven't read the article yet? Check it out on Medium
+##### Haven't read the article yet? Check it out on Medium
 
 ### Installation Guide
 
